@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetjava.Assign_papersController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="assignement_papers_form" layoutY="2.0" prefHeight="692.0" prefWidth="1309.0">
+         <children>
+            <AnchorPane layoutX="253.0" prefHeight="700.0" prefWidth="1054.0" stylesheets="@dashbordDesign.css">
+               <children>
+                  <AnchorPane layoutX="16.0" layoutY="66.0" prefHeight="597.0" prefWidth="433.0" stylesheets="@dashbordDesign.css">
+                     <children>
+                        <TableView fx:id="articleTableView" layoutX="21.0" layoutY="50.0" prefHeight="533.0" prefWidth="387.0" styleClass="table-column" stylesheets="@dashbordDesign.css">
+                           <columns>
+                              <TableColumn fx:id="id_article" prefWidth="35.0" text="ID" />
+                              <TableColumn fx:id="id_conf" prefWidth="35.0" text="conf" />
+                              <TableColumn fx:id="title" minWidth="0.0" prefWidth="108.0" text="Article TitLe" />
+                              <TableColumn fx:id="pdf_file" minWidth="0.0" prefWidth="93.0" text="Name pdf file" />
+                              <TableColumn fx:id="statu" minWidth="0.0" prefWidth="88.0" text="Statu" />
+                              <TableColumn fx:id="comit_id" prefWidth="62.0" text="Comit-ID" />
+                           </columns>
+                        </TableView>
+                        <TextField layoutX="26.0" layoutY="14.0" prefHeight="25.0" prefWidth="227.0" promptText="search by name" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane layoutX="455.0" layoutY="67.0" prefHeight="318.0" prefWidth="515.0" stylesheets="@dashbordDesign.css">
+                     <children>
+                        <TableView fx:id="comiteTableView" layoutX="21.0" layoutY="50.0" prefHeight="244.0" prefWidth="480.0" styleClass="table-column" stylesheets="@dashbordDesign.css">
+                           <columns>
+                              <TableColumn fx:id="id_comit" prefWidth="59.0" text="Comit_ID" />
+                              <TableColumn fx:id="conf_id" minWidth="0.0" prefWidth="87.0" text="Conf_ID" />
+                              <TableColumn fx:id="user_id" prefWidth="72.0" text="User_ID" />
+                              <TableColumn fx:id="name" prefWidth="63.0" text="Name" />
+                              <TableColumn fx:id="email" minWidth="0.0" prefWidth="105.0" text="Email" />
+                              <TableColumn fx:id="institut" minWidth="0.0" prefWidth="93.0" text="Institution" />
+                           </columns>
+                        </TableView>
+                        <TextField layoutX="26.0" layoutY="14.0" prefHeight="25.0" prefWidth="227.0" promptText="search by name" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+                  <TextField fx:id="article_id_textbox" layoutX="558.0" layoutY="460.0" prefHeight="25.0" prefWidth="155.0" />
+                  <TextField fx:id="comit_id_textbox" layoutX="815.0" layoutY="462.0" prefHeight="25.0" prefWidth="155.0" />
+                  <Label layoutX="458.0" layoutY="420.0" prefHeight="25.0" prefWidth="211.0" styleClass="textfield" stylesheets="@dashbordDesign.css" text="   ASSIGN PAPER HERE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="458.0" layoutY="512.0" prefHeight="25.0" prefWidth="291.0" styleClass="textfield" stylesheets="@dashbordDesign.css" text="MANAGE Committee Member">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="482.0" layoutY="464.0" prefHeight="17.0" prefWidth="68.0" text="ARTICLE ID" />
+                  <Label layoutX="754.0" layoutY="466.0" text="COMIT_ID" />
+                  <TextField fx:id="conf_id_textbox" layoutX="558.0" layoutY="559.0" prefHeight="25.0" prefWidth="155.0" />
+                  <TextField fx:id="user_id_textbox" layoutX="815.0" layoutY="561.0" prefHeight="25.0" prefWidth="155.0" />
+                  <Label layoutX="482.0" layoutY="563.0" prefHeight="17.0" prefWidth="68.0" text="CONF ID" />
+                  <Label layoutX="754.0" layoutY="565.0" text="USER ID" />
+                  <Button fx:id="add_btn" layoutX="516.0" layoutY="614.0" mnemonicParsing="false" onAction="#add" prefHeight="27.0" prefWidth="106.0" styleClass="add-btn" stylesheets="@dashbordDesign.css" text="ADD" />
+                  <Button fx:id="assign_btn" layoutX="864.0" layoutY="419.0" mnemonicParsing="false" onAction="#assign" prefHeight="27.0" prefWidth="106.0" styleClass="add-btn" stylesheets="@dashbordDesign.css" text="Assign" />
+                  <Label layoutX="104.0" layoutY="26.0" prefHeight="27.0" prefWidth="240.0" stylesheets="@dashbordDesign.css" text="        PAPER TABLE" textFill="#860a86">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="542.0" layoutY="26.0" prefHeight="27.0" prefWidth="342.0" stylesheets="@dashbordDesign.css" text="Scientific COMMITEE MEMBERS TABLE" textFill="#900a7c">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane layoutX="-2.0" layoutY="-16.0" prefHeight="716.0" prefWidth="267.0" styleClass="login-bg" stylesheets="@design.css">
+               <children>
+                  <Label layoutX="24.0" layoutY="134.0" prefHeight="27.0" prefWidth="220.0" styleClass="nav-form" stylesheets="@dashbordDesign.css" text="   ADMIN DASHBORD" textFill="#f5ebeb">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="147.0" prefHeight="27.0" prefWidth="155.0" textFill="#fcf6f6">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="main_screen_btn" layoutX="30.0" layoutY="204.0" mnemonicParsing="false" onAction="#go_to" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="  Main Screen" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="create_conf_btn" layoutX="30.0" layoutY="259.0" mnemonicParsing="false" onAction="#go_to_create_conf" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="Create Conference" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="manage_key_btn" layoutX="30.0" layoutY="315.0" mnemonicParsing="false" onAction="#go_to_manage_key" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="Manage Key Speakers" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="assignpage_btn" layoutX="30.0" layoutY="430.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="Assign Papers" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="participants_btn" layoutX="30.0" layoutY="487.0" mnemonicParsing="false" onAction="#go_to_participants" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="List Of Participants" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="log_out_btn" layoutX="121.0" layoutY="619.0" mnemonicParsing="false" onAction="#go_to" prefHeight="42.0" prefWidth="145.0" styleClass="logout" stylesheets="@dashbordDesign.css" text="Log out" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

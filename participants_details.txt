@@ -1,0 +1,8 @@
+Liste des Participants:
+Inscription ID: 1
+Conference ID: 1
+Mode de paiement: Carte Bancaire
+Nom: mohamed
+Email: mohamed@gmail
+Institution: isg
+

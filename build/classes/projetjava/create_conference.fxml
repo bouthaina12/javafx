@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="633.0" prefWidth="1241.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetjava.Create_conferenceController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="create_conference_form" layoutX="6.0" layoutY="10.0" prefHeight="649.0" prefWidth="1176.0">
+         <children>
+            <AnchorPane layoutX="-7.0" layoutY="-10.0" prefHeight="676.0" prefWidth="265.0" styleClass="login-bg" stylesheets="@design.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="127.0" prefHeight="27.0" prefWidth="220.0" styleClass="nav-form" stylesheets="@dashbordDesign.css" text="   ADMIN DASHBORD" textFill="#f5ebeb">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="147.0" prefHeight="27.0" prefWidth="155.0" textFill="#fcf6f6">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="log_out_btn" layoutX="100.0" layoutY="582.0" mnemonicParsing="false" onAction="#go_to" prefHeight="42.0" prefWidth="165.0" styleClass="logout" stylesheets="@dashbordDesign.css" text="Log out" textFill="WHITE" />
+                  <Button fx:id="main_screen_btn" layoutX="19.0" layoutY="217.0" mnemonicParsing="false" onAction="#go_to" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="  Main Screen" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="create_conf_btn" layoutX="19.0" layoutY="275.0" mnemonicParsing="false" onAction="#go_to" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="Create Conference" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="participants_btn" layoutX="19.0" layoutY="399.0" mnemonicParsing="false" onAction="#go_to_participants" prefHeight="42.0" prefWidth="205.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="Liste Of Participants" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="manage_key_speaker_btn1" layoutX="19.0" layoutY="338.0" mnemonicParsing="false" onAction="#go_to_manage_speakers" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="Manage key Speakers" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="assign_btn" layoutX="19.0" layoutY="461.0" mnemonicParsing="false" onAction="#go_to_assign" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="Assign Papers" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="254.0" layoutY="-10.0" prefHeight="676.0" prefWidth="981.0" stylesheets="@dashbordDesign.css">
+               <children>
+                  <AnchorPane layoutX="16.0" layoutY="26.0" prefHeight="286.0" prefWidth="950.0" stylesheets="@dashbordDesign.css">
+                     <children>
+                        <TableView fx:id="conferenceTableView" layoutX="11.0" layoutY="50.0" onMouseClicked="#display_conference" prefHeight="232.0" prefWidth="923.0" styleClass="table-column" stylesheets="@dashbordDesign.css">
+                           <columns>
+                              <TableColumn fx:id="id_conference" prefWidth="35.0" text="ID" />
+                              <TableColumn fx:id="title_conference" prefWidth="65.0" text="Title" />
+                              <TableColumn fx:id="institution_conference" prefWidth="135.0" text="Organizing Institution" />
+                              <TableColumn fx:id="location_conference" prefWidth="135.0" text="Location" />
+                              <TableColumn fx:id="president_conference" prefWidth="73.0" text="President" />
+                              <TableColumn fx:id="startdate_conference" prefWidth="66.0" text="Start Date" />
+                              <TableColumn fx:id="enddate_conference" prefWidth="143.0" text="End Date" />
+                              <TableColumn minWidth="0.0" prefWidth="0.0" text="Location" />
+                              <TableColumn fx:id="submissionddline_conference" minWidth="0.0" prefWidth="77.0" text="Submission " />
+                              <TableColumn fx:id="registrationddline_conference" minWidth="0.0" prefWidth="127.0" text=" Registration ddline" />
+                              <TableColumn fx:id="fees_conference" prefWidth="55.0" text="Fees" />
+                           </columns>
+                        </TableView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="326.0" prefHeight="318.0" prefWidth="937.0" stylesheets="@dashbordDesign.css">
+                     <children>
+                        <Label layoutX="35.0" layoutY="81.0" prefHeight="25.0" prefWidth="91.0" stylesheets="@dashbordDesign.css" text="  Title" textFill="#171717">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="211.0" prefHeight="27.0" prefWidth="106.0" stylesheets="@dashbordDesign.css" text="  Start Date">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="168.0" prefHeight="27.0" prefWidth="126.0" stylesheets="@dashbordDesign.css" text="  President ID">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="124.0" prefHeight="27.0" prefWidth="211.0" stylesheets="@dashbordDesign.css" text="  Organizing Institution">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="249.0" prefHeight="27.0" prefWidth="106.0" stylesheets="@dashbordDesign.css" text="End Date">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="490.0" layoutY="51.0" prefHeight="27.0" prefWidth="258.0" stylesheets="@dashbordDesign.css" text=" Submission Deadline">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="501.0" layoutY="94.0" prefHeight="27.0" prefWidth="258.0" stylesheets="@dashbordDesign.css" text="Registration Deadline">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="501.0" layoutY="132.0" prefHeight="27.0" prefWidth="258.0" stylesheets="@dashbordDesign.css" text="Registration Fees">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="modify_conf_btn" layoutX="621.0" layoutY="270.0" mnemonicParsing="false" onAction="#modify_confrence" prefHeight="27.0" prefWidth="106.0" styleClass="update-btn" stylesheets="@dashbordDesign.css" text="Modify" />
+                        <Button fx:id="delete_conf_btn" layoutX="736.0" layoutY="270.0" mnemonicParsing="false" onAction="#delete_conference" prefHeight="27.0" prefWidth="138.0" styleClass="delete-btn" stylesheets="@dashbordDesign.css" text="Delete" />
+                        <TextField fx:id="institution_conf_textbox" layoutX="252.0" layoutY="124.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="title_conf_textbox" layoutX="252.0" layoutY="85.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="president_id_textbox" layoutX="252.0" layoutY="173.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="end_date_textbox" layoutX="252.0" layoutY="249.0" prefHeight="27.0" prefWidth="224.0" promptText="YYYY-MM-DD" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="start_date_textbox" layoutX="252.0" layoutY="211.0" prefHeight="27.0" prefWidth="224.0" promptText="YYYY-MM-DD" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="submission_textbox" layoutX="701.0" layoutY="52.0" prefHeight="27.0" prefWidth="224.0" promptText="YYYY-MM-DD" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="fees_textbox" layoutX="701.0" layoutY="133.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="registration_textbox" layoutX="701.0" layoutY="94.0" prefHeight="27.0" prefWidth="224.0" promptText="YYYY-MM-DD" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <Button fx:id="add_conf_btn" layoutX="501.0" layoutY="270.0" mnemonicParsing="false" onAction="#create_conference" prefHeight="27.0" prefWidth="106.0" styleClass="add-btn" stylesheets="@dashbordDesign.css" text="ADD" />
+                        <Label layoutX="501.0" layoutY="181.0" prefHeight="27.0" prefWidth="258.0" stylesheets="@dashbordDesign.css" text="Location">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="location_textbox" layoutX="701.0" layoutY="182.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+               </children>
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

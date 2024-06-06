@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetjava.ConnexionController">
+   <children>
+      <AnchorPane fx:id="login_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <AnchorPane prefHeight="510.0" prefWidth="400.0" styleClass="login-bg" stylesheets="@design.css">
+               <children>
+                  <Label layoutX="77.0" layoutY="324.0" text="Welcome to our community! " textFill="#a0c2e1">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                                       </Label>
+                  <ImageView fitHeight="200.0" fitWidth="199.0" layoutX="92.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="image1" layoutX="408.0" layoutY="5.0" prefHeight="500.0" prefWidth="400.0" stylesheets="@design.css">
+               <children>
+                  <Label layoutX="163.0" layoutY="149.0" text="USER" textFill="#2f1745">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="89.0" layoutY="217.0" prefHeight="33.0" prefWidth="239.0" promptText="username" styleClass="textfield-design" stylesheets="@design.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="password" layoutX="89.0" layoutY="259.0" prefHeight="33.0" prefWidth="239.0" promptText="password" styleClass="textfield-design" stylesheets="@design.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="login_btn" layoutX="154.0" layoutY="325.0" mnemonicParsing="false" onAction="#login" prefHeight="33.0" prefWidth="109.0" styleClass="button-design" stylesheets="@design.css" text="Log in" textFill="#eee2e2a6">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="create_acc" layoutX="136.0" layoutY="435.0" onAction="#changeForm" styleClass="hypertext-design" stylesheets="@design.css" text="Create New Account?">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <ImageView fx:id="image" fitHeight="110.0" fitWidth="154.0" layoutX="154.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signup_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" visible="false">
+         <children>
+            <AnchorPane layoutX="400.0" prefHeight="510.0" prefWidth="400.0" styleClass="login-bg" stylesheets="@design.css">
+               <children>
+                  <Label layoutX="77.0" layoutY="324.0" text="Welcome to our community! " textFill="#dacece">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                     
+                  </Label>
+                  <ImageView fitHeight="200.0" fitWidth="199.0" layoutX="101.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="500.0" prefWidth="400.0" stylesheets="@design.css">
+               <children>
+                  <Label layoutX="146.0" layoutY="140.0" text="Sign up" textFill="#7eace8">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username1" layoutX="85.0" layoutY="312.0" prefHeight="33.0" prefWidth="239.0" promptText="username" styleClass="textfield-design" stylesheets="@design.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="password1" layoutX="85.0" layoutY="352.0" prefHeight="33.0" prefWidth="239.0" promptText="password" styleClass="textfield-design" stylesheets="@design.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="login_btn1" layoutX="150.0" layoutY="403.0" mnemonicParsing="false" onAction="#signup" prefHeight="33.0" prefWidth="109.0" styleClass="button-design" stylesheets="@design.css" text="Sign up" textFill="#eee2e2a6">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="login_acc" layoutX="113.0" layoutY="464.0" onAction="#changeForm" styleClass="hypertext-design" stylesheets="@design.css" text="Already have an Account?">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <TextField fx:id="username11" layoutX="85.0" layoutY="193.0" prefHeight="33.0" prefWidth="239.0" promptText="name" styleClass="textfield-design" stylesheets="@design.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="username12" layoutX="85.0" layoutY="234.0" prefHeight="33.0" prefWidth="239.0" promptText="email" styleClass="textfield-design" stylesheets="@design.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="username13" layoutX="85.0" layoutY="273.0" prefHeight="33.0" prefWidth="239.0" promptText="institution" styleClass="textfield-design" stylesheets="@design.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fx:id="image2" fitHeight="90.0" fitWidth="101.0" layoutX="167.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

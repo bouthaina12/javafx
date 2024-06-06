@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="686.0" prefWidth="1230.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="projetjava.InscriptionController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="inscription_form" layoutX="16.0" layoutY="20.0" prefHeight="649.0" prefWidth="1176.0">
+         <children>
+            <AnchorPane layoutX="-18.0" layoutY="-20.0" prefHeight="686.0" prefWidth="276.0" styleClass="login-bg" stylesheets="@design.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="127.0" prefHeight="27.0" prefWidth="220.0" styleClass="nav-form" stylesheets="@dashbordDesign.css" text="   USER DASHBORD" textFill="#f5ebeb">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="147.0" prefHeight="27.0" prefWidth="155.0" textFill="#fcf6f6">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="log_out_btn" layoutX="100.0" layoutY="582.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="165.0" styleClass="logout" stylesheets="@dashbordDesign.css" text="Log out" textFill="WHITE" />
+                  <Button fx:id="main_screen_btn" layoutX="19.0" layoutY="217.0" mnemonicParsing="false" onAction="#go_to" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="  Main Screen" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="inscription_btn" layoutX="19.0" layoutY="275.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="189.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="Inscription And Submition " textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="my_papers_btn" layoutX="22.0" layoutY="330.0" mnemonicParsing="false" onAction="#go_to_my_papers" prefHeight="42.0" prefWidth="205.0" styleClass="textfield-design" stylesheets="@dashbordDesign.css" text="My Papers" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="254.0" layoutY="-20.0" prefHeight="686.0" prefWidth="981.0" stylesheets="@dashbordDesign.css">
+               <children>
+                  <AnchorPane layoutX="16.0" layoutY="26.0" prefHeight="286.0" prefWidth="950.0" stylesheets="@dashbordDesign.css">
+                     <children>
+                        <TableView fx:id="conferenceTableView" layoutX="11.0" layoutY="50.0" onMouseClicked="#display_conference" prefHeight="232.0" prefWidth="923.0" styleClass="table-column" stylesheets="@dashbordDesign.css">
+                           <columns>
+                              <TableColumn fx:id="id_conference" prefWidth="35.0" text="ID" />
+                              <TableColumn fx:id="title_conference" prefWidth="65.0" text="Title" />
+                              <TableColumn fx:id="institution_conference" prefWidth="135.0" text="Organizing Institution" />
+                              <TableColumn fx:id="location_conference" prefWidth="135.0" text="Location" />
+                              <TableColumn fx:id="president_conference" prefWidth="73.0" text="President" />
+                              <TableColumn fx:id="startdate_conference" prefWidth="66.0" text="Start Date" />
+                              <TableColumn fx:id="enddate_conference" prefWidth="143.0" text="End Date" />
+                              <TableColumn minWidth="0.0" prefWidth="0.0" text="Location" />
+                              <TableColumn fx:id="submissionddline_conference" minWidth="0.0" prefWidth="77.0" text="Submission " />
+                              <TableColumn fx:id="registrationddline_conference" minWidth="0.0" prefWidth="127.0" text=" Registration ddline" />
+                              <TableColumn fx:id="fees_conference" prefWidth="66.0" text="Fees" />
+                           </columns>
+                        </TableView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="325.0" prefHeight="318.0" prefWidth="937.0" stylesheets="@dashbordDesign.css">
+                     <children>
+                        <Label layoutX="21.0" layoutY="85.0" prefHeight="25.0" prefWidth="91.0" stylesheets="@dashbordDesign.css" text="  Conf Id" textFill="#171717">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="211.0" prefHeight="27.0" prefWidth="106.0" stylesheets="@dashbordDesign.css" text="Institution">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="168.0" prefHeight="27.0" prefWidth="126.0" stylesheets="@dashbordDesign.css" text="Email">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="124.0" prefHeight="27.0" prefWidth="211.0" stylesheets="@dashbordDesign.css" text="Name">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name_textbox" layoutX="252.0" layoutY="124.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="conf_id_textbox" layoutX="252.0" layoutY="85.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="email_textbox" layoutX="252.0" layoutY="173.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="institution_textbox" layoutX="252.0" layoutY="211.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <Button fx:id="inscrire_btn" layoutX="416.0" layoutY="252.0" mnemonicParsing="false" onAction="#inscrire" prefHeight="27.0" prefWidth="106.0" styleClass="add-btn" stylesheets="@dashbordDesign.css" text="inscrire" />
+                        <Label layoutX="27.0" layoutY="252.0" prefHeight="27.0" prefWidth="189.0" stylesheets="@dashbordDesign.css" text="Mode de paiment" textFill="#171717">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="mode_paiment_combo" layoutX="261.0" layoutY="253.0" prefWidth="150.0" />
+                        <Label layoutX="559.0" layoutY="90.0" prefHeight="20.0" prefWidth="97.0" text="Titre Article">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="559.0" layoutY="129.0" prefHeight="17.0" prefWidth="126.0" text="fichier pdf">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="titre_textbox" layoutX="679.0" layoutY="85.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <TextField fx:id="fichier_pdf_textbox" layoutX="679.0" layoutY="124.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <Button fx:id="importer_btn" layoutX="728.0" layoutY="173.0" mnemonicParsing="false" onAction="#pdf" prefHeight="27.0" prefWidth="106.0" styleClass="add-btn" stylesheets="@dashbordDesign.css" text="Upload File" />
+                        <Button fx:id="submit" layoutX="604.0" layoutY="173.0" mnemonicParsing="false" onAction="#submit" prefHeight="27.0" prefWidth="106.0" styleClass="clear-btn" stylesheets="@dashbordDesign.css" text="Submit" />
+                        <TextField fx:id="conf_id_textbox1" layoutX="679.0" layoutY="52.0" prefHeight="27.0" prefWidth="224.0" styleClass="label-info" stylesheets="@dashbordDesign.css" />
+                        <Label layoutX="550.0" layoutY="52.0" prefHeight="25.0" prefWidth="91.0" stylesheets="@dashbordDesign.css" text="  Conf Id" textFill="#171717">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="632.0" layoutY="8.0" prefHeight="27.0" prefWidth="259.0" stylesheets="@dashbordDesign.css" text="SUBMIT AN ARTICLE" textFill="#437fa4">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="166.0" layoutY="8.0" prefHeight="27.0" prefWidth="259.0" stylesheets="@dashbordDesign.css" text="INSCRIPTION FORM" textAlignment="CENTER" textFill="#437fa4">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+               </children>
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
